@@ -57,4 +57,10 @@ Docker is a tool helps developers to easily deploy and run their applications us
 | -------------------- |:---------------:| ------:|--------------:|
 | ccf287c57675    | right-fastapi_ner_image |0.0.0.0:80->80/tcp | fastapi_ner_container|
 
-* In my case it is  http://0.0.0.0:80/doc Go there and test the API 
+* In my case it is  http://0.0.0.0:80/docs Go there and test the API 
+
+
+## Teaser video
+
+[IMAGE ALT TEXT HERE](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
