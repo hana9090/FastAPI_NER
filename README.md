@@ -62,5 +62,5 @@ Docker is a tool helps developers to easily deploy and run their applications us
 
 ## Teaser video
 
-[IMAGE ALT TEXT HERE](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[video](https://dms.licdn.com/playlist/C4D05AQG9jTvvDumKVg/mp4-720p-30fp-crf28/0?e=1602428400&v=beta&t=iLBzvbhCP67q9bLYY5T_MtCtkyijiyRoS84ZbLrJ-ws)
 
