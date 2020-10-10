@@ -1,8 +1,8 @@
-## Deploy Named Entity Recognition service using FastAPI
+## Deploy Named Entity Recognition using FastAPI
 
 * My goal to deploy any ML/DL model using FastAPI and prepare a Docker to containerized the API.
 
-![im](resources/image.jpg)
+![](https://github.com/hana9090/FastAPI_NER/blob/main/resources/template.jpg?raw=true)
 
 ## Named Entity Recognition
 
@@ -36,8 +36,10 @@ Docker is a tool helps developers to easily deploy and run their applications us
 `uvicorn main:app --reload`
 
 * Go to FastAPI Swagger UI http://127.0.0.1:8000/docs to access your API
-![im](resources/image1.jpg)
-![im](resources/image2.jpg)
+
+![im](https://github.com/hana9090/FastAPI_NER/blob/main/resources/image1.png?raw=true)
+
+![im](https://github.com/hana9090/FastAPI_NER/blob/main/resources/image2.png?raw=true)
 
 ### Docker
 
