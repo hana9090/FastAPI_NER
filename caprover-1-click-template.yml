@@ -1,0 +1,34 @@
+captainVersion: 4
+caproverOneClickApp:
+    variables:
+    instructions:
+        start: >-
+            NER with Spacy, delivered by FastAPI and/or Streamlit.
+        end: >
+            NER with Spacy, delivered by FastAPI and/or Streamlit deployed.
+    displayName: NER with Spacy, delivered by FastAPI and/or Streamlit
+    isOfficial: false
+    description: NER with Spacy, delivered by FastAPI and/or Streamlit
+    documentation: NER with Spacy, delivered by FastAPI and/or Streamlit
+########
+version: '3'
+
+services:
+  $$cap_appname-frontend:
+    image: chrisdietr/fastapi_ner_frontend:0.0.1
+    build: frontend
+    ports:
+      - 8501:8501
+    depends_on:
+      - $$cap_appname-backend
+    volumes:
+        - $$cap_appname-data:/storage
+  $$cap_appname-backend:
+    image: chrisdietr/fastapi_ner_backend:0.0.1
+    build: backend
+    ports:
+      - 8080:8080
+    volumes:
+      - $$cap_appname-data:/storage
+volumes:
+    $$cap_appname-data: {}
