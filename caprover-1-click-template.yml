@@ -14,16 +14,16 @@ caproverOneClickApp:
 version: '3'
 
 services:
-  $$cap_appname-frontend:
+  $$cap_appname-spacy-streamlit-fastapi-frontend:
     image: chrisdietr/fastapi_ner_frontend:0.0.1
     build: frontend
     ports:
       - 8501:8501
     depends_on:
-      - $$cap_appname-backend
+      - $$cap_appname-spacy-streamlit-fastapi-backend
     volumes:
         - $$cap_appname-data:/storage
-  $$cap_appname-backend:
+  $$cap_appname-spacy-streamlit-fastapi-backend:
     image: chrisdietr/fastapi_ner_backend:0.0.1
     build: backend
     ports:

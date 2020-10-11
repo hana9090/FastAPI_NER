@@ -7,9 +7,11 @@ from processing import process
 st.title("NER with Spacy & FastAPI")
 
 st.header("Check if FastAPI is live:")
-hello = requests.get('http://ner-backend.heychef.net:8080/').json()
+hello = requests.get('https://ner-spacy-streamlit-fastapi-backend.heychef.net/').json()
 st.write(hello)
 
+st.subheader("Api docs:")
+st.write("https://ner-spacy-streamlit-fastapi-backend.heychef.net/docs")
 
 st.header("Named Entity Recognition")
 # input field for text
