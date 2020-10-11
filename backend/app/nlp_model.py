@@ -9,7 +9,7 @@ class Structure_Ner(BaseModel):
     entity_loc:str
 
 #explanation on the returned location of the entity
-entity_loc_dict = {'B': 'BEGIN (first token in mutli-token entity)', 'I': 'INNER (inner token of a multi-token entity)', 'L': 'LAST token multi-token entity', 'U': 'uint (single token entity)', 'O': 'Out entity token'}
+entity_loc_dict = {'B': 'BEGIN (first token in multi-token entity)', 'I': 'INNER (inner token of a multi-token entity)', 'L': 'LAST token multi-token entity', 'U': 'uint (single token entity)', 'O': 'Out entity token'}
 
 #explanation on the names of entities
 entity_dict = {
@@ -45,7 +45,7 @@ async def check_name_entity_recognition(text):
     nlp = en_core_web_sm.load()
     doc = nlp(text)
     
-    ner= [Structure_Ner(word= str(X), entity_loc= entity_loc_dict[str(X.ent_iob_)], entity= entity_dict[str(X.ent_type_)]) for X in doc if X.ent_type_]
+    ner = [Structure_Ner(word= str(X), entity_loc= entity_loc_dict[str(X.ent_iob_)], entity= entity_dict[str(X.ent_type_)]) for X in doc if X.ent_type_]
 
     return ner
 
