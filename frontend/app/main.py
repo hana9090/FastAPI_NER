@@ -7,7 +7,7 @@ from processing import process
 st.title("NER with Spacy & FastAPI")
 
 st.header("Check if FastAPI is live:")
-hello = requests.get('http://host.docker.internal:8080/').json()
+hello = requests.get('http://ner-backend.heychef.net:8080/').json()
 st.write(hello)
 
 
