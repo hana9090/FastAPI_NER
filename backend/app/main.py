@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from fastapi import FastAPI, Query, Path
-#Import your ML/DL model
+# Import your ML/DL model
 from nlp_model import check_name_entity_recognition
 
 app = FastAPI()
@@ -9,9 +9,12 @@ class Text(BaseModel):
     text:str
 
 #API to call NER model
-@app.post('/name_entity_recognition/')
+@app.post('/named_entity_recognition/')
 async def check_ner(text:Text):
-    out =  await check_name_entity_recognition(text.text)
+    '''
+    - Send your string
+    '''
+    out = await check_name_entity_recognition(text.text)
     return out
 
 @app.get("/")
