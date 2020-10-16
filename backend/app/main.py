@@ -13,7 +13,6 @@ class Text(BaseModel):
 async def check_ner(text:Text):
     '''
     - Send your string
-    - asdfasdfsadf
     '''
     out = await check_name_entity_recognition(text.text)
     return out
